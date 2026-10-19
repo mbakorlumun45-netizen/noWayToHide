@@ -40,6 +40,22 @@ class OfficerRepositoryImplTest {
         officer.setId(1);
         officerRepository.save(officer);
         Officer myOfficer = officerRepository.findById(1);
-        assertEquals(officer,myOfficer);    }
+        assertEquals(officer,myOfficer);
+    }
+
+    @Test
+    public void testThatOfficerInfoCanBeDeletedById() {
+        OfficerRepositoryImpl officerRepository = new OfficerRepositoryImpl();
+        Officer officer1 = new Officer();
+        officer1.setId(1);
+        Officer officer2 = new Officer();
+        officer1.setId(2);
+        officerRepository.save(officer1);
+        officerRepository.save(officer2);
+        assertEquals(2L,officerRepository.count());
+        officerRepository.delete(1);
+        assertEquals(1L,officerRepository.count());
+
+    }
 }
 

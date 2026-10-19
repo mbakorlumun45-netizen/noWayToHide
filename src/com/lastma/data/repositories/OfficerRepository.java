@@ -6,12 +6,11 @@ import com.lastma.data.models.Officer;
 public interface OfficerRepository {
     long count();
 
-    Officer save(Officer officer);
+    void  save(Officer officer);
 
-    long count(Driver driver);
 
-    Driver findById(int id);
+    Officer findById(int id);
 
-    void del(int id);
+    void delete(int id);
 
 }

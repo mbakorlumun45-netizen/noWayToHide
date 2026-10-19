@@ -39,4 +39,7 @@ public class Driver {
     }
 
 
+    public long getPlateNumber() {
+        return 0;
+    }
 }

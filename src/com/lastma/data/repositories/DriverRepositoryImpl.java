@@ -28,6 +28,11 @@ public class DriverRepositoryImpl implements DriverRepository{
 
     @Override
     public Driver findById(int id) {
+        for(Driver driver : drivers){
+            if(driver.getId() == id){
+                return driver;
+            }
+        }
         return null;
     }
 
@@ -36,4 +41,7 @@ public class DriverRepositoryImpl implements DriverRepository{
 
     }
 
+    public int findByPlateNumber(int plateNumber) {
+        return plateNumber;
+    }
 }

@@ -3,16 +3,17 @@ package com.lastma.data.models;
 import java.time.Year;
 
 public class Vehicle {
-    private String plateNumber;
+    private int plateNumber;
     private String brand;
     private String model;
     private Year year;
+    private Driver driver;
 
-    public String getPlateNumber() {
+    public int getPlateNumber() {
         return plateNumber;
     }
 
-    public void setPlateNumber(String plateNumber) {
+    public void setPlateNumber(int plateNumber) {
         this.plateNumber = plateNumber;
     }
 
@@ -38,5 +39,21 @@ public class Vehicle {
 
     public void setYear(Year year) {
         this.year = year;
+    }
+
+    public int getPlateNumer() {
+        return plateNumber;
+    }
+
+//    public void setDriver(Driver driver){
+//        this.driver = driver;
+//    }
+//
+//    public Driver setDriver() {
+//        return driver;
+//    }
+
+    public Driver getDriver() {
+        return driver;
     }
 }

@@ -44,15 +44,6 @@ public class Vehicle {
     public int getPlateNumer() {
         return plateNumber;
     }
-
-//    public void setDriver(Driver driver){
-//        this.driver = driver;
-//    }
-//
-//    public Driver setDriver() {
-//        return driver;
-//    }
-
     public Driver getDriver() {
         return driver;
     }

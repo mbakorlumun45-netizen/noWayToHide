@@ -11,4 +11,18 @@ public interface VehicleRepository {
 
     Driver findByPlateNumber(int plateNumber);
     long count();
+
+    Vehicle findVehicleByPlateNumber(int plateNumber);
+
+//    Vehicle findVehicleByPlateNumber(int plateNumber, Vehicle vehicle);
+
+    Vehicle findVehicleByPlateNumber(int plateNumber, Vehicle vehicle);
+
+    Vehicle updateVehicle(int plateNumber, Vehicle vehicle);
+
+//    Vehicle findVehicleByPlateNumber(int plateNumber);
+//
+//    Vehicle updateVehicle(int plateNumber, Vehicle vehicle);
+//
+//    int updateVehicle(updateVehicleint plateNumber, Vehicle vehicle);
 }

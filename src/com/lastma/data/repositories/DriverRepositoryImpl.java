@@ -41,6 +41,11 @@ public class DriverRepositoryImpl implements DriverRepository{
 
     }
 
+    @Override
+    public void add(Driver driver) {
+
+    }
+
     public int findByPlateNumber(int plateNumber) {
         return plateNumber;
     }

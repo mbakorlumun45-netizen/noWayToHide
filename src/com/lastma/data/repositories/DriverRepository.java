@@ -12,4 +12,6 @@ public interface DriverRepository {
    Driver findById(int id);
 
    void del(int id);
+
+   void add(Driver driver);
 }

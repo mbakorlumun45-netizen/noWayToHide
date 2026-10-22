@@ -40,4 +40,36 @@ public class VehicleRepositoryImpl implements VehicleRepository {
     public long count() {
         return vehicles.size();
     }
+
+    @Override
+    public Vehicle findVehicleByPlateNumber(int plateNumber) {
+        Vehicle foundVehicle = null;
+        for (Vehicle vehicle : vehicles){
+            if (vehicle.getPlateNumber() == plateNumber){
+                foundVehicle = vehicle;
+            }
+        }
+        return foundVehicle;
+    }
+
+    @Override
+    public Vehicle findVehicleByPlateNumber(int plateNumber, Vehicle vehicle) {
+        for (Vehicle foundVehicle : vehicles) {
+            if (foundVehicle.getPlateNumber() == plateNumber) {
+                return foundVehicle;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Vehicle updateVehicle(int plateNumber, Vehicle vehicle) {
+        for (int count = 0; count < vehicles.size(); count++) {
+            if (vehicles.get(count).getPlateNumber() == plateNumber) {
+                vehicles.set(count, vehicle);
+                return vehicle;
+            }
+        }
+        return null;
+    }
 }

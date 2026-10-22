@@ -51,18 +51,4 @@ class VehicleRepositoryImplTest {
 
         assertEquals(savedDriver, foundDriver);
     }
-
-//    @Test
-//    public void testThatWhenIFindByPlateNumber_DriverIsFound() {
-//        DriverRepositoryImpl driverRepository = new DriverRepositoryImpl();
-//
-//        Driver driver = new Driver();
-//        Driver savedDriver = driverRepository.save(driver);
-//
-//        int driverId = savedDriver.getId();
-//
-//        Driver foundDriver = driverRepository.findByPlateNumber(plateNUmber);
-//
-//        assertEquals(savedDriver, foundDriver);
-//    }
 }
